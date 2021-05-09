@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <title>Call via Ajax</title>
+
+	</head>
+	<body>
+	<button type="button" class="btn">Click me!</button>
+
+	
+	
+	<script>
+	
+	(function($) {
+
+  
+
+$('.btn').click(function() {
+  
+  $('.text').text('loading . . .');
+  
+  $.ajax({ 
+    type:"GET", 
+    url:"http://www.example.com/api/get/1", 
+    success: function(data) { 
+      $('.text').text(JSON.stringify(data)); 
+    },
+  
+    dataType: 'jsonp',
+  });
+  
+});
+	</script>
+	</body>
+	</html>
+	
+	
