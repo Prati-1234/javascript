@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+<title> JavaScript validation</title>
+<head>
+</head>
+<body>
+
+<div class="container">
+<h1>Fill the following form:</h1>
+<form name="frm" method="post" action="thankyou.html">
+<p><input type="text"="fname" name="firstname" placeholder="First Name..."></p>
+<p><input type="text"="lname" name="lastname" placeholder="Last Name..."></p>
+<label>
+<p><input type="checkbox" name="checkagree" value="agree"> Checkme</p>
+</label>
+<input type="submit" value="Submit" onclick="return val();">
+
+</form>
+
+</div>
+
+
+
+<script type="text/javascript">
+function val(){
+if(frm.checkagree.checked == false)
+{
+alert('You did not choose the checkbox!');
+return false;
+}
+return true;
+}
+</script> 
+
+</body>
+</html>
